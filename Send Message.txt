@@ -1,0 +1,11 @@
+void SendMessage(String message){
+  myGSM.println("AT+CMGF=1");
+  delay(100);
+  myGSM.println("AT+CMGS=\"09462743741\"\r");
+  delay(100);
+  myGSM.println(message);
+  delay(100);
+  myGSM.println((char)26);
+  delay(100);
+  
+ }
